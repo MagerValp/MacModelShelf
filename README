@@ -1,0 +1,24 @@
+MacModelShelf
+=============
+
+What?
+-----
+
+A small Python module that gives you nice human readable Macintosh model
+names, e.g. "iMac (27-inch, Late 2009)", when given a serial number or model
+code. It uses shelve to keep a persistent dictionary of model codes, and looks
+up unknown model codes from Apple's servers.
+
+How?
+----
+
+    import macmodelshelf
+
+    macmodelshelf.model_code("W89345825RU") # Returns the model code "5RU"
+
+    macmodelshelf.model("5RU")              # Returns "iMac (27-inch, Late 2009)"
+
+Dump?
+-----
+
+    python -c "import macmodelshelf; macmodelshelf._dump()"
