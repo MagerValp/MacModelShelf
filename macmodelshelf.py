@@ -19,10 +19,11 @@ except BaseException, e:
 def model_code(serial):
     if "serial" in serial.lower(): # Workaround for machines with dummy serial numbers.
         return None
-    elif len(serial) in (11, 12):
+    if len(serial) in (12, 13) and serial.startswith("S"): # Remove S prefix from scanned codes.
+        serial = serial[1:]
+    if len(serial) in (11, 12):
         return serial[8:].decode("ascii")
-    else:
-        return None
+    return None
     
 
 def lookup_mac_model_code_from_apple(model_code):
@@ -54,10 +55,19 @@ def _dump():
 
 if __name__ == '__main__':
     try:
-        if len(sys.argv[1]) in (11, 12):
-            print model(model_code(sys.argv[1]))
+        if sys.argv[1] == "dump":
+            _dump()
+            sys.exit(0)
+        if len(sys.argv[1]) in (11, 12, 13):
+            m = model(model_code(sys.argv[1]))
         else:
-            print model(sys.argv[1])
+            m = model(sys.argv[1])
+        if m:
+            print m
+            sys.exit(0)
+        else:
+            print >>sys.stderr, "Unknown model %s" % repr(sys.argv[1])
+            sys.exit(1)
     except IndexError:
         print "Usage: macmodelshelf.py serial_number"
         sys.exit(1)

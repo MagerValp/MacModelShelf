@@ -12,15 +12,21 @@ up unknown model codes from Apple's servers.
 How?
 ----
 
-import macmodelshelf
-macmodelshelf.model_code("W89345825RU") # Returns the model code "5RU"
-macmodelshelf.model("5RU")              # Returns "iMac (27-inch, Late 2009)"
+In your code:
+
+    import macmodelshelf
+    macmodelshelf.model_code("W12345825RU") # Returns the model code "5RU"
+    macmodelshelf.model("5RU")              # Returns "iMac (27-inch, Late 2009)"
+
+On the commandline:
+
+    % ./macmodelshelf.py 5RU
+    iMac (27-inch, Late 2009)
 
 Dump?
 -----
 
-python -c "import macmodelshelf; macmodelshelf._dump()"
-
+% ./macmodelshelf.py dump
 macmodelshelfdump = {
     "0P1": "MacBook (13-inch, Early 2008)",
     "0TG": "iMac (24-inch, Early 2009)",
