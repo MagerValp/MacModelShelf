@@ -37,9 +37,11 @@ def lookup_mac_model_code_from_apple(model_code):
 
 def model(code):
     global macmodelshelf
+    code = code.upper()
     try:
         model = macmodelshelf[code]
     except KeyError:
+        print >>sys.stderr, "Looking up %s from Apple" % code
         model = lookup_mac_model_code_from_apple(code)
         if model:
             macmodelshelf[code] = model
