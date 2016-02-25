@@ -4094,6 +4094,7 @@ macmodelshelfdump = {
     "GFWP": "MacBook Air (11-inch, Early 2015)",
     "GG77": "iMac (21.5-inch, Late 2015)",
     "GG78": "iMac (Retina 4K, 21.5-inch, Late 2015)",
+    "GG79": "iMac (21.5-inch, Late 2015)",
     "GG7D": "iMac (21.5-inch, Late 2015)",
     "GG7F": "iMac (Retina 4K, 21.5-inch, Late 2015)",
     "GG7G": "iMac (21.5-inch, Late 2015)",
@@ -4102,6 +4103,9 @@ macmodelshelfdump = {
     "GG7N": "iMac (Retina 5K, 27-inch, Late 2015)",
     "GG7V": "iMac (Retina 5K, 27-inch, Late 2015)",
     "GG8": "Power Mac G3 Minitower",
+    "GG80": "iMac (Retina 5K, 27-inch, Late 2015)",
+    "GG81": "iMac (Retina 5K, 27-inch, Late 2015)",
+    "GG82": "iMac (Retina 5K, 27-inch, Late 2015)",
     "GG9": "Power Mac G3 Minitower",
     "GGA": "Power Mac G3 Minitower",
     "GGE": "iMac DV (Slot Loading)",
@@ -8226,5 +8230,5 @@ macmodelshelfdump = {
     "ZP3": "Final Cut Express 4.0",
     "ZP8": "AirPort Express 802.11n (1st Generation)",
     "ZTM": "Time Capsule 802.11n (1st Generation)",
-    "ZTN": "Time Capsule 802.11n (1st Generation)",
+    "ZTN": "Time Capsule 802.11n (1st Generation)"
 }
