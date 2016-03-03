@@ -50,8 +50,7 @@ def model(code):
 
 def _dump():
     print "macmodelshelfdump = {"
-    for code, model in sorted(macmodelshelf.items()):
-        print '    "%s": "%s",' % (code, model)
+    print ",\n".join(['    "%s": "%s"' % (code, model) for code, model in sorted(macmodelshelf.items())])
     print "}"
     
 
