@@ -4321,6 +4321,8 @@ macmodelshelfdump = {
     "H0Q4": "iMac (Retina 5K, 27-inch, Late 2015)",
     "H0Q5": "iMac (Retina 5K, 27-inch, Late 2015)",
     "H0X": "Mac Pro (Mid 2010)",
+    "H1DP": "MacBook Pro (Retina, 13-inch, Early 2015)",
+    "H1DQ": "MacBook Pro (Retina, 13-inch, Early 2015)",
     "H1S": "iMac (20-inch, Mid 2009)",
     "H1X": "iMac (21.5-inch, Mid 2010)",
     "H1Z": "iMac (21.5-inch, Mid 2010)",
