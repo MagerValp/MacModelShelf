@@ -46,7 +46,7 @@ def cleanup_model(model):
     return model
     
 
-def model(code, cleanup=False):
+def model(code, cleanup=True):
     global macmodelshelf
     code = code.upper()
     try:
@@ -64,7 +64,7 @@ def model(code, cleanup=False):
 
 def _dump():
     print "macmodelshelfdump = {"
-    print ",\n".join(['    "%s": "%s"' % (code, model) for code, model in sorted(macmodelshelf.items())])
+    print ",\n".join(['    "%s": "%s"' % (code, cleanup_model(model)) for code, model in sorted(macmodelshelf.items())])
     print "}"
     
 
@@ -74,9 +74,9 @@ if __name__ == '__main__':
             _dump()
             sys.exit(0)
         if len(sys.argv[1]) in (11, 12, 13):
-            m = model(model_code(sys.argv[1]), cleanup=True)
+            m = model(model_code(sys.argv[1]))
         else:
-            m = model(sys.argv[1], cleanup=True)
+            m = model(sys.argv[1])
         if m:
             print m
             sys.exit(0)
