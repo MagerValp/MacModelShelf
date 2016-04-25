@@ -5,6 +5,7 @@ import sys
 import shelve
 import urllib2
 from xml.etree import ElementTree
+import re
 
 
 DBPATH = "macmodelshelf"
@@ -35,7 +36,17 @@ def lookup_mac_model_code_from_apple(model_code):
         return None
     
 
-def model(code):
+CLEANUP_RES = [
+    (re.compile(r"inch ? "), "inch, "),
+    (re.compile(r"  "), " "),
+]
+def cleanup_model(model):
+    for pattern, replacement in CLEANUP_RES:
+        model = pattern.sub(replacement, model)
+    return model
+    
+
+def model(code, cleanup=False):
     global macmodelshelf
     code = code.upper()
     try:
@@ -45,8 +56,11 @@ def model(code):
         model = lookup_mac_model_code_from_apple(code)
         if model:
             macmodelshelf[code] = model
-    return model
-
+    if cleanup and model:
+        return cleanup_model(model)
+    else:
+        return model
+    
 
 def _dump():
     print "macmodelshelfdump = {"
@@ -60,9 +74,9 @@ if __name__ == '__main__':
             _dump()
             sys.exit(0)
         if len(sys.argv[1]) in (11, 12, 13):
-            m = model(model_code(sys.argv[1]))
+            m = model(model_code(sys.argv[1]), cleanup=True)
         else:
-            m = model(sys.argv[1])
+            m = model(sys.argv[1], cleanup=True)
         if m:
             print m
             sys.exit(0)
