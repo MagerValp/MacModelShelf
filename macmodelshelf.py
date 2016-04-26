@@ -2,17 +2,28 @@
 
 
 import sys
+import os
+import argparse
 import shelve
 import urllib2
 from xml.etree import ElementTree
+import re
 
 
 DBPATH = "macmodelshelf"
 
+
+def print8(*args):
+    print " ".join(unicode(x).encode(u"utf-8") for x in args)
+
+def printerr8(*args):
+    print >>sys.stderr, " ".join(unicode(x).encode(u"utf-8") for x in args)
+
+
 try:
     macmodelshelf = shelve.open(DBPATH)
 except BaseException, e:
-    print >>sys.stderr, "Couldn't open macmodelshelf.db: %s" % e
+    printerr8(u"Couldn't open macmodelshelf.db: %s" % unicode(e))
     sys.exit(1)
 
 
@@ -35,40 +46,65 @@ def lookup_mac_model_code_from_apple(model_code):
         return None
     
 
-def model(code):
+CLEANUP_RES = [
+    (re.compile(ur"inch ? "), u"inch, "),
+    (re.compile(ur"  "), u" "),
+]
+def cleanup_model(model):
+    for pattern, replacement in CLEANUP_RES:
+        model = pattern.sub(replacement, model)
+    return model
+    
+
+def model(code, cleanup=True):
     global macmodelshelf
     code = code.upper()
     try:
         model = macmodelshelf[code]
     except KeyError:
-        print >>sys.stderr, "Looking up %s from Apple" % code
+        printerr8(u"Looking up %s from Apple" % code)
         model = lookup_mac_model_code_from_apple(code)
         if model:
             macmodelshelf[code] = model
-    return model
-
-
-def _dump():
-    print "macmodelshelfdump = {"
-    print ",\n".join(['    "%s": "%s"' % (code, model) for code, model in sorted(macmodelshelf.items())])
-    print "}"
+    if cleanup and model:
+        return cleanup_model(model)
+    else:
+        return model
     
 
+def _dump(cleanup=True):
+    def clean(model):
+        if cleanup:
+            return cleanup_model(model)
+        else:
+            return model
+    print8(u"macmodelshelfdump = {")
+    print8(u",\n".join([u'    "%s": "%s"' % (code, clean(model)) for code, model in sorted(macmodelshelf.items())]))
+    print8(u"}")
+
+
+def main(argv):   
+    p = argparse.ArgumentParser()
+    p.add_argument(u"-n", u"--no-cleanup", action=u"store_false",
+                   dest=u"cleanup", help=u"Don't clean up model strings.")
+    p.add_argument(u"code", help=u"Serial number or model code")
+    args = p.parse_args([x.decode(u"utf-8") for x in argv[1:]])
+    
+    if args.code == u"dump":
+        _dump(args.cleanup)
+        return 0
+    
+    if len(args.code) in (11, 12, 13):
+        m = model(model_code(args.code), cleanup=args.cleanup)
+    else:
+        m = model(args.code, cleanup=args.cleanup)
+    if m:
+        print m
+        return 0
+    else:
+        printerr8(u"Unknown model %s" % repr(args.code))
+        return os.EX_UNAVAILABLE
+
+
 if __name__ == '__main__':
-    try:
-        if sys.argv[1] == "dump":
-            _dump()
-            sys.exit(0)
-        if len(sys.argv[1]) in (11, 12, 13):
-            m = model(model_code(sys.argv[1]))
-        else:
-            m = model(sys.argv[1])
-        if m:
-            print m
-            sys.exit(0)
-        else:
-            print >>sys.stderr, "Unknown model %s" % repr(sys.argv[1])
-            sys.exit(1)
-    except IndexError:
-        print "Usage: macmodelshelf.py serial_number"
-        sys.exit(1)
+    sys.exit(main(sys.argv))
