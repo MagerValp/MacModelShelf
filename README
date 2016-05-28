@@ -4132,6 +4132,8 @@ macmodelshelfdump = {
     "GJDC": "Mac mini (Late 2014)",
     "GJDM": "iMac (Retina 5K, 27-inch, Late 2014)",
     "GJDN": "iMac (Retina 5K, 27-inch, Late 2014)",
+    "GJDP": "iMac (Retina 5K, 27-inch, Late 2014)",
+    "GJDQ": "iMac (Retina 5K, 27-inch, Late 2014)",
     "GJE": "Power Mac G4 (AGP Graphics)",
     "GJF": "Power Mac G4 (AGP Graphics)",
     "GKJG": "MacBook Pro (Retina, 13-inch, Early 2015)",
