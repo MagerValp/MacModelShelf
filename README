@@ -4528,6 +4528,8 @@ macmodelshelfdump = {
     "HEG": "iMac (Slot Loading)",
     "HEK": "Power Mac G4 (PCI Graphics)",
     "HES": "Power Mac G4 (AGP Graphics)",
+    "HF4F": "MacBook Air (13-inch, Early 2015)",
+    "HF4H": "MacBook Air (13-inch, Early 2015)",
     "HF7": "Mac Pro (Mid 2010)",
     "HF8": "Mac Pro (Mid 2010)",
     "HF9": "Mac Pro (Mid 2010)",
