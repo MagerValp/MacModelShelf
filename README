@@ -4448,6 +4448,8 @@ macmodelshelfdump = {
     "H7D": "Power Mac G4 (PCI Graphics)",
     "H7W": "Power Mac G4 (PCI Graphics)",
     "H8H": "iMac (27-inch, Mid 2010)",
+    "H8KX": "iMac (21.5-inch, Late 2015)",
+    "H8KY": "iMac (Retina 4K, 21.5-inch, Late 2015)",
     "H8L0": "iMac (Retina 4K, 21.5-inch, Late 2015)",
     "H8L1": "iMac (Retina 4K, 21.5-inch, Late 2015)",
     "H8L2": "iMac (Retina 4K, 21.5-inch, Late 2015)",
