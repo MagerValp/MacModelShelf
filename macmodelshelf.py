@@ -78,8 +78,11 @@ def _dump(cleanup=True):
             return cleanup_model(model)
         else:
             return model
+    items = macmodelshelf.keys()
+    items.sort()
+    items.sort(key=len)
     print8(u"macmodelshelfdump = {")
-    print8(u",\n".join([u'    "%s": "%s"' % (code, clean(model)) for code, model in sorted(macmodelshelf.items())]))
+    print8(u",\n".join([u'    "%s": "%s"' % (code, clean(macmodelshelf[code])) for code in items]))
     print8(u"}")
 
 
