@@ -58,6 +58,8 @@ def cleanup_model(model):
 
 def model(code, cleanup=True):
     global macmodelshelf
+    if code == None:
+        return None
     code = code.upper()
     try:
         model = macmodelshelf[code]
