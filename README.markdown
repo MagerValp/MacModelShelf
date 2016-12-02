@@ -26,19 +26,19 @@ On the commandline:
 Dump?
 -----
 
-% ./macmodelshelf.py dump-json
-macmodelshelfdump = {
-    "000": "Power Mac G5",
-    "00W": "Xserve (Late 2006)",
-    "01P": "MacBook (13-inch, Late 2007)",
-`…`
-}
-% ./macmodelshelf.py dump-markdown
-Code | Model
-:--- | :---
-`000` | Power Mac G5
-`00W` | Xserve (Late 2006)
-`01P` | MacBook (13-inch, Late 2007)
-`…`
+    % ./macmodelshelf.py dump-json
+    macmodelshelfdump = {
+        "000": "Power Mac G5",
+        "00W": "Xserve (Late 2006)",
+        "01P": "MacBook (13-inch, Late 2007)",
+    ...
+    }
+    % ./macmodelshelf.py dump-markdown
+    Code | Model
+    :--- | :---
+    `000` | Power Mac G5
+    `00W` | Xserve (Late 2006)
+    `01P` | MacBook (13-inch, Late 2007)
+    ...
 
 For a dump of all the models in the current cache, see [`dump.markdown`](dump.markdown).
