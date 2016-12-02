@@ -74,7 +74,8 @@ def model(code, cleanup=True):
         return model
     
 
-def _dump(cleanup=True):
+def _dump(cleanup=True, format=u"json"):
+    assert format in (u"json", u"markdown")
     def clean(model):
         if cleanup:
             return cleanup_model(model)
@@ -83,9 +84,14 @@ def _dump(cleanup=True):
     items = macmodelshelf.keys()
     items.sort()
     items.sort(key=len)
-    print8(u"macmodelshelfdump = {")
-    print8(u",\n".join([u'    "%s": "%s"' % (code, clean(macmodelshelf[code])) for code in items]))
-    print8(u"}")
+    if format == u"json":
+        print8(u"macmodelshelfdump = {")
+        print8(u",\n".join([u'    "%s": "%s"' % (code, clean(macmodelshelf[code])) for code in items]))
+        print8(u"}")
+    elif format == u"markdown":
+        print8(u"Code | Model")
+        print8(u":--- | :---")
+        print8(u"\n".join(u'`%s` | %s' % (code, clean(macmodelshelf[code])) for code in items))
 
 
 def main(argv):   
@@ -95,8 +101,13 @@ def main(argv):
     p.add_argument(u"code", help=u"Serial number or model code")
     args = p.parse_args([x.decode(u"utf-8") for x in argv[1:]])
     
-    if args.code == u"dump":
-        _dump(args.cleanup)
+    dump_format = {
+        u"dump": u"json",
+        u"dump-json": u"json",
+        u"dump-markdown": u"markdown",
+    }
+    if args.code in dump_format.keys():
+        _dump(args.cleanup, dump_format[args.code])
         return 0
     
     if len(args.code) in (11, 12, 13):
