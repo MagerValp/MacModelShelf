@@ -75,7 +75,7 @@ def model(code, cleanup=True):
     
 
 def _dump(cleanup=True, format=u"json"):
-    assert format in (u"json", u"markdown")
+    assert format in (u"python", u"json", u"markdown")
     def clean(model):
         if cleanup:
             return cleanup_model(model)
@@ -84,8 +84,12 @@ def _dump(cleanup=True, format=u"json"):
     items = macmodelshelf.keys()
     items.sort()
     items.sort(key=len)
-    if format == u"json":
+    if format == u"python":
         print8(u"macmodelshelfdump = {")
+        print8(u",\n".join([u'    "%s": "%s"' % (code, clean(macmodelshelf[code])) for code in items]))
+        print8(u"}")
+    elif format == u"json":
+        print8(u"{")
         print8(u",\n".join([u'    "%s": "%s"' % (code, clean(macmodelshelf[code])) for code in items]))
         print8(u"}")
     elif format == u"markdown":
@@ -102,7 +106,8 @@ def main(argv):
     args = p.parse_args([x.decode(u"utf-8") for x in argv[1:]])
     
     dump_format = {
-        u"dump": u"json",
+        u"dump": u"python",
+        u"dump-python": u"python",
         u"dump-json": u"json",
         u"dump-markdown": u"markdown",
     }
