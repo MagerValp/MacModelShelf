@@ -8141,8 +8141,13 @@ Code | Model
 `GG80` | iMac (Retina 5K, 27-inch, Late 2015)
 `GG81` | iMac (Retina 5K, 27-inch, Late 2015)
 `GG82` | iMac (Retina 5K, 27-inch, Late 2015)
+`GGK6` | iPod touch (6th generation)
 `GHFF` | iMac (27-inch, Late 2013)
 `GHJH` | iMac (21.5-inch, Late 2013)
+`GHK9` | iPad mini 4
+`GHKJ` | iPad mini 4
+`GHKK` | iPad mini 4
+`GHMN` | iPad mini 4 Wi-Fi + Cellular
 `GHPF` | urBeats (2nd generation)
 `GHPG` | urBeats (2nd generation)
 `GHPH` | urBeats (2nd generation)
@@ -8209,6 +8214,9 @@ Code | Model
 `GMC7` | MacBook Air (11-inch, Early 2015)
 `GMC8` | MacBook Air (11-inch, Early 2015)
 `GMC9` | MacBook Air (11-inch, Early 2015)
+`GMLD` | iPad Pro
+`GMLF` | iPad Pro
+`GMLG` | iPad Pro
 `GN8C` | MacBook Air (13-inch, Early 2015)
 `GNJJ` | MacBook Air (13-inch, Early 2015)
 `GNJK` | MacBook Air (11-inch, Early 2015)
@@ -8221,6 +8229,7 @@ Code | Model
 `GP4P` | MacBook Air (11-inch, Early 2014)
 `GQ17` | iMac (Retina 5K, 27-inch, Late 2015)
 `GQ18` | iMac (Retina 5K, 27-inch, Late 2015)
+`GQ62` | MacBook Pro (Retina, 15-inch, Mid 2015)
 `GQCL` | MacBook Pro (Retina, 15-inch, Mid 2015)
 `GQCM` | MacBook Pro (Retina, 15-inch, Mid 2015)
 `GQCP` | MacBook Pro (Retina, 15-inch, Mid 2015)
@@ -8230,6 +8239,8 @@ Code | Model
 `GQR4` | MacBook Pro (Retina, 13-inch, Early 2015)
 `GQR5` | MacBook Pro (Retina, 13-inch, Early 2015)
 `GQR6` | MacBook Pro (Retina, 13-inch, Early 2015)
+`GRY6` | iPhone 6s
+`GRYC` | iPhone 6s
 `GTDX` | MacBook Pro (13-inch, Late 2016, Four Thunderbolt 3 Ports)
 `GTDY` | MacBook Pro (15-inch, Late 2016)
 `GTF1` | MacBook Pro (15-inch, Late 2016)
@@ -8286,8 +8297,11 @@ Code | Model
 `H1F7` | iMac (Retina 4K, 21.5-inch, Late 2015)
 `H1F8` | iMac (Retina 4K, 21.5-inch, Late 2015)
 `H1F9` | iMac (Retina 4K, 21.5-inch, Late 2015)
+`H1M9` | iPad Pro (9.7-inch)
+`H1MK` | iPad Pro (9.7-inch)
 `H25M` | iMac (21.5-inch, Late 2015)
 `H25N` | iMac (Retina 4K, 21.5-inch, Late 2015)
+`H2XJ` | iPhone SE
 `H3GP` | iMac (Retina 5K, 27-inch, Late 2015)
 `H3GQ` | iMac (Retina 5K, 27-inch, Late 2015)
 `H3GR` | iMac (Retina 5K, 27-inch, Late 2015)
@@ -8321,6 +8335,7 @@ Code | Model
 `H3R6` | MacBook (Retina, 12-inch, Early 2016)
 `H3R7` | MacBook (Retina, 12-inch, Early 2016)
 `H569` | MacBook Air (13-inch, Early 2015)
+`H7JY` | iMac (21.5-inch, 2017)
 `H8KX` | iMac (21.5-inch, Late 2015)
 `H8KY` | iMac (Retina 4K, 21.5-inch, Late 2015)
 `H8L0` | iMac (Retina 4K, 21.5-inch, Late 2015)
@@ -8337,9 +8352,114 @@ Code | Model
 `HF1T` | MacBook Pro (13-inch, Late 2016, Four Thunderbolt 3 Ports)
 `HF4F` | MacBook Air (13-inch, Early 2015)
 `HF4H` | MacBook Air (13-inch, Early 2015)
+`HG04` | iPhone 7 Plus
+`HG08` | iPhone 7 Plus
+`HG5D` | iPad Air 2
+`HG5F` | iPad Air 2
+`HG7J` | iPhone 7
+`HG7X` | iPhone 7
+`HG7Y` | iPhone 7
+`HGC4` | iPad mini 4 Wi-Fi + Cellular
+`HGJ1` | iPad mini 4
+`HH22` | MacBook (Retina, 12-inch, 2017)
+`HLF9` | iPad (5th generation)
+`HLFC` | iPad (5th generation)
+`HLFD` | iPad (5th generation)
+`HLFF` | iPad (5th generation)
+`HLJK` | iPad (5th generation) Wi-Fi + Cellular
+`HND6` | iPad Pro (12.9-inch) (2nd generation) Wi-Fi
 `HP49` | MacBook Pro (13-inch, Late 2016, Four Thunderbolt 3 Ports)
 `HP4D` | MacBook Pro (13-inch, Late 2016, Four Thunderbolt 3 Ports)
+`HP50` | iPad Pro (10.5-inch) Wi-Fi
+`HP9X` | iPad (5th generation)
+`HPJ4` | iPad Pro (12.9-inch) (2nd generation) Wi-Fi
 `HRMD` | MacBook (Retina, 12-inch, Early 2016)
 `HRMF` | MacBook (Retina, 12-inch, Early 2016)
 `HRMG` | MacBook (Retina, 12-inch, Early 2016)
+`HTD5` | MacBook Pro (15-inch, 2017)
+`HTD6` | MacBook Pro (15-inch, 2017)
+`HTD7` | MacBook Pro (15-inch, 2017)
+`HTD8` | MacBook Pro (15-inch, 2017)
+`HTDD` | MacBook Pro (15-inch, 2017)
+`HTDG` | MacBook Pro (15-inch, 2017)
+`HTDH` | MacBook Pro (15-inch, 2017)
+`HTVL` | iPhone SE
+`HV29` | MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
+`HV2D` | MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
+`HV2G` | MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
+`HV2H` | MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
+`HV2J` | MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)
+`HV2Q` | MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)
+`HV2T` | MacBook Pro (13-inch, 2017, Four Thunderbolt 3 Ports)
 `HV5K` | MacBook Pro (13-inch, 2016, Two Thunderbolt 3 ports)
+`HX87` | iMac Pro (2017)
+`J1G6` | iMac (Retina 4K, 21.5-inch, 2017)
+`J1GT` | iMac (Retina 5K, 27-inch, 2017)
+`J1WL` | MacBook Air (13-inch, 2017)
+`J1WV` | MacBook Air (13-inch, 2017)
+`J262` | iPad Pro (12.9-inch) (2nd generation) Wi-Fi
+`J263` | iPad Pro (12.9-inch) (2nd generation) Wi-Fi
+`J28K` | iPad Pro (10.5-inch) Wi-Fi
+`J28L` | iPad Pro (10.5-inch) Wi-Fi
+`J2D1` | iPad Pro (10.5-inch) Wi-Fi + Cellular
+`J5X4` | Apple Watch Series 3 GPS Aluminum 42mm (3rd gen)
+`J925` | MacBook Pro (15-inch, 2017)
+`J926` | MacBook Pro (15-inch, 2017)
+`JC67` | iPhone 8
+`JC6G` | iPhone 8
+`JC6H` | iPhone 8
+`JCLC` | iPhone X
+`JCLG` | iPhone X
+`JCLJ` | iPhone X
+`JCLK` | iPhone X
+`JCLY` | iPhone 8 Plus
+`JCM2` | iPhone 8 Plus
+`JCM5` | iPhone 8 Plus
+`JF88` | iPad (6th generation) Wi-Fi + Cellular
+`JF8J` | iPad (6th generation)
+`JF8K` | iPad (6th generation)
+`JF8M` | iPad (6th generation)
+`JF8N` | iPad (6th generation)
+`JG5H` | MacBook Pro (15-inch, 2018)
+`JG5L` | MacBook Pro (15-inch, 2018)
+`JG5M` | MacBook Pro (15-inch, 2018)
+`JGH5` | MacBook Pro (15-inch, 2018)
+`JGH6` | MacBook Pro (15-inch, 2018)
+`JGH7` | MacBook Pro (15-inch, 2018)
+`JGH8` | MacBook Pro (15-inch, 2018)
+`JHCD` | MacBook Pro (13-inch, 2018, Four Thunderbolt 3 Ports)
+`JHCF` | MacBook Pro (13-inch, 2018, Four Thunderbolt 3 Ports)
+`JHD2` | MacBook Pro (13-inch, 2018, Four Thunderbolt 3 Ports)
+`JHD3` | MacBook Pro (13-inch, 2018, Four Thunderbolt 3 Ports)
+`JHD4` | MacBook Pro (13-inch, 2018, Four Thunderbolt 3 Ports)
+`JK7P` | MacBook Air (Retina, 13-inch, 2018)
+`JK7Q` | MacBook Air (Retina, 13-inch, 2018)
+`JMVT` | iPad (6th generation)
+`JV3N` | iMac (Retina 5K, 27-inch, 2019)
+`JV3Y` | iMac (Retina 5K, 27-inch, 2019)
+`JV42` | iMac (Retina 5K, 27-inch, 2019)
+`JYVW` | Mac mini (2018)
+`JYVX` | Mac mini (2018)
+`JYW0` | Mac mini (2018)
+`K7M9` | iPad Pro 12.9-inch, (3rd generation) Wi-Fi
+`K7MC` | iPad Pro 12.9-inch, (3rd generation) Wi-Fi
+`K7RG` | iPad Pro 12.9-inch, (3rd generation) Wi-Fi
+`KC51` | iPad Pro 12.9-inch, (3rd generation) Wi-Fi + Cellular
+`KD6M` | iPad Pro 11-inch, Wi-Fi
+`KPG1` | iPhone XS
+`KPGF` | iPhone XS
+`KPHP` | iPhone XS Max
+`KXKP` | iPhone XR
+`KXKX` | iPhone XR
+`L42X` | MacBook Pro (13-inch, 2018, Four Thunderbolt 3 Ports)
+`LM93` | iPad mini (5th generation)
+`LM94` | iPad mini (5th generation)
+`LM99` | iPad mini (5th generation)
+`LVDL` | MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
+`LVDN` | MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
+`LVDQ` | MacBook Pro (15-inch, 2019)
+`LVDT` | MacBook Pro (15-inch, 2019)
+`LYWH` | MacBook Air (Retina, 13-inch, 2019)
+`LYWQ` | MacBook Air (Retina, 13-inch, 2019)
+`LYWR` | MacBook Air (Retina, 13-inch, 2019)
+`MJLT` | MacBook Pro (15-inch, 2018)
