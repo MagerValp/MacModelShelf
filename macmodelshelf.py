@@ -39,7 +39,9 @@ def model_code(serial):
 
 def lookup_mac_model_code_from_apple(model_code):
     try:
-        f = urllib2.urlopen("http://support-sp.apple.com/sp/product?cc=%s&lang=en_US" % model_code, timeout=2)
+        earl = "http://support-sp.apple.com/sp/product?cc=%s&lang=en_US" % model_code
+        call = urllib2.Request(earl, headers={'Accept' : '*/*'})
+        f = urllib2.urlopen(call)
         et = ElementTree.parse(f)
         return et.findtext("configCode").decode("utf-8")
     except:
